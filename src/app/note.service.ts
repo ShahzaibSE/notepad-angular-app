@@ -35,6 +35,10 @@ export class NoteService {
   updateNote(note: NoteModel, index: any){
     try {
       if(note.title) {
+        for(let i=0; i<=this.notes.length; i++){
+          if(note.id == this.notes[i].id){
+          }
+        }
         // this.notes[index].title
       }
     }
