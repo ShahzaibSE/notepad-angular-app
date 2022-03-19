@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { GridComponent } from './grid.component';
 // 
 import {MatGridListModule} from '@angular/material/grid-list'
@@ -8,17 +9,20 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 // Components.
 import {HeaderComponent} from './../header/header.component';
+import {NoteEditorComponent} from './../note-editor/note-editor.component';
+import { NotelistComponent } from './../notelist/notelist.component';
 
 
 
 @NgModule({
   declarations: [
     GridComponent,
-    HeaderComponent
+    HeaderComponent,
+    NoteEditorComponent, 
+    NotelistComponent, 
   ],
   imports: [
-    CommonModule,
-    MatGridListModule, MatToolbarModule, MatIconModule, MatButtonModule,
+    CommonModule, MatToolbarModule, MatGridListModule, MatIconModule, MatButtonModule, ReactiveFormsModule
   ],
   exports: [GridComponent]
 })
