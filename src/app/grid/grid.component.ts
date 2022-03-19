@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { window } from 'rxjs';
 
 export interface Tile {
   color: string;
@@ -20,7 +21,8 @@ export class GridComponent implements OnInit {
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }
