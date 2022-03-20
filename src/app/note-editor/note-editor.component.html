@@ -9,12 +9,12 @@
         <div class="example-button-row">
             <div class="example-flex-container">
               <div class="example-button-container">
-                <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="add_new_note()">
                   <mat-icon>add</mat-icon>
                 </button>
               </div>
               <div class="example-button-container">
-                <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+                <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon" (click)="edit_note()">
                   <mat-icon>edit</mat-icon>
                 </button>
               </div>
