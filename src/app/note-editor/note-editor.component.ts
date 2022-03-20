@@ -24,7 +24,7 @@ export class NoteEditorComponent implements OnInit {
 
   add_new_note(){
     console.log('Add button - clicked')
-    console.log(this.editorFormGroup?.controls['title'].value)
+    console.log(this.editorFormGroup.get('title')?.value)
   }
 
   edit_note(){
