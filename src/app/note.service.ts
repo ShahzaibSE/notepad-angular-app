@@ -36,7 +36,7 @@ export class NoteService {
     try {
       if(note.title) {
         for(let i=0; i<=this.notes.length; i++){
-          if(note.id == this.notes[i].id){
+          if(note.title == this.notes[i].title){
           }
         }
         // this.notes[index].title
