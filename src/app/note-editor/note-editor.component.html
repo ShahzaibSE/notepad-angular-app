@@ -2,9 +2,9 @@
     <mat-card>
         <div class="text-field-placement">
           <form [formGroup]="editorFormGroup" novalidate>
-            <mat-form-field appearance="fill" formControlName="title">
+            <mat-form-field appearance="fill">
                 <mat-label>Title</mat-label>
-                <input matInput>
+                <input formControlName="title" matInput>
             </mat-form-field>
           </form>
         </div>
@@ -25,5 +25,5 @@
         <div>
         </div>
     </mat-card>
-    <mat-card>{{editorFormGroup.value | json}}</mat-card>
+    <!-- <mat-card>{{editorFormGroup.value | json}}</mat-card> -->
 </div>
