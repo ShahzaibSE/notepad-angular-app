@@ -23,6 +23,7 @@ export class NoteEditorComponent implements OnInit {
   }
 
   add_new_note(){
+    let note = new NoteModel()
     console.log('Add button - clicked')
     console.log(this.editorFormGroup.get('title')?.value)
   }
