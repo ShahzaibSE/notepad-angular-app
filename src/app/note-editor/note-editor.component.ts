@@ -10,20 +10,21 @@ import { NoteModel } from '../note.model';
   styleUrls: ['./note-editor.component.scss']
 })
 export class NoteEditorComponent implements OnInit {
-  editorFormGroup?: FormGroup
+  editorFormGroup!: FormGroup
 
-  constructor(private formbuilder: FormBuilder, private noteService: NoteService) { }
-
-  ngOnInit(): void {
+  constructor(private formbuilder: FormBuilder, private noteService: NoteService) {
     this.editorFormGroup = this.formbuilder.group({
       title: ['', Validators.required],
       date: ['']
     })
   }
 
+  ngOnInit(): void {
+  }
+
   add_new_note(){
     console.log('Add button - clicked')
-    // const note = new NoteModel(this.editorFormGroup?.get('title')?.value)
+    console.log(this.editorFormGroup?.controls['title'].value)
   }
 
   edit_note(){
