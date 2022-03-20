@@ -3,7 +3,6 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 //
 import {NoteService} from "./../note.service";
 import { NoteModel } from '../note.model';
-import { title } from 'process';
 
 @Component({
   selector: 'app-note-editor',
