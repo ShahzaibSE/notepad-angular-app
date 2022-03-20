@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 //
 import {NoteService} from "./../note.service";
 import { NoteModel } from '../note.model';
+import { title } from 'process';
 
 @Component({
   selector: 'app-note-editor',
@@ -23,9 +24,12 @@ export class NoteEditorComponent implements OnInit {
   }
 
   add_new_note(){
-    let note = new NoteModel()
-    console.log('Add button - clicked')
-    console.log(this.editorFormGroup.get('title')?.value)
+    let note = new NoteModel(this.editorFormGroup.get('title')?.value)
+    if(this.noteService.addNote(note)){
+      console.log('Note added successfully')
+    }else{
+      console.log('Internal Error while adding a note')
+    }
   }
 
   edit_note(){
