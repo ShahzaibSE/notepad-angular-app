@@ -14,3 +14,10 @@ export class NoteModel {
         this.updatedAt = updatedAt
     }
 }
+
+export interface Note{
+    title?: String;
+    description?: String;
+    createdAt?: Date;
+    updatedAt?: Date;
+}

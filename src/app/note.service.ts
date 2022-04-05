@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Firestore, collectionData, collection } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 // Model.
-import {NoteModel} from "./note.model";
+import {NoteModel, Note} from "./note.model";
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +11,7 @@ export class NoteService {
 
   notes: Array<NoteModel> = []
 
-  constructor() { }
+  constructor(firestore: Firestore) { }
 
   addNote(note: NoteModel){
     try{
