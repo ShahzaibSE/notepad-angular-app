@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collectionData, collection } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 // Model.
 import {NoteModel, Note} from "./note.model";
@@ -11,12 +11,14 @@ export class NoteService {
 
   notes: Array<NoteModel> = []
 
-  constructor(firestore: Firestore) { }
+  constructor(private firestore: AngularFirestore) { }
 
   addNote(note: NoteModel){
     try{
       if(note.title) {
-        this.notes.push(note)
+        // this.notes.push(note)
+        // this.firestore.collection(this)
+        this.firestore.collection('notepadStore').add(note)
       }
       return this.notes
     }
